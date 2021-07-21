@@ -1308,7 +1308,7 @@ void CheckLanguage(void)
 	if (gl_select_lang == 0xE1E1) { //english
 		LoadEnglish();
 	}
-	else { //÷–Œƒ
+	else { //√ñ√ê√é√Ñ
 		LoadChinese();
 	}
 }
@@ -1999,6 +1999,9 @@ int main(void)
 		scanKeys();
 		if (keysDownRepeat() & KEY_L || keysDown() & KEY_L)
 		{
+			// Go to main menu if L pressed (otherwise autoboot last nor game)
+		}
+		else{
 			page_num = NOR_list;
 			goto load_file;
 		}
